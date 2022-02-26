@@ -1,4 +1,4 @@
-{%load static %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <!-- Basic -->
@@ -17,8 +17,8 @@
     <meta name="author" content="">
 
     <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png' %}">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
@@ -108,15 +108,15 @@
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="index"><img src="{% static 'images/logo.png' %}" class="logo" alt=""></a>
+                    <a class="navbar-brand" href="index"><img src="{% static 'images/logo.png' %}" class="logo" alt=""></a>
                 </div>
                 <!-- End Header Navigation -->
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li class="nav-item"><a class="nav-link" href=<a class="navbar-brand" href="index"><img src="{% static 'images/logo.png' %}" class="logo" alt=""></a>>Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about">About Us</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About Us</a></li>
                         <li class="dropdown megamenu-fw">
                             <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">Product</a>
                             <ul class="dropdown-menu megamenu-content" role="menu">
@@ -126,10 +126,10 @@
                                             <h6 class="title">Top</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-                                                    <li><a href="shop.html">Jackets</a></li>
-                                                    <li><a href="shop.html">Shirts</a></li>
-                                                    <li><a href="shop.html">Sweaters & Cardigans</a></li>
-                                                    <li><a href="shop.html">T-shirts</a></li>
+                                                    <li><a href="{% url 'index' %}">Jackets</a></li>
+                                                    <li><a href="{% url 'index' %}">Shirts</a></li>
+                                                    <li><a href="{% url 'index' %}">Sweaters & Cardigans</a></li>
+                                                    <li><a href="{% url 'index' %}">T-shirts</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -138,10 +138,10 @@
                                             <h6 class="title">Bottom</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-                                                    <li><a href="shop.html">Swimwear</a></li>
-                                                    <li><a href="shop.html">Skirts</a></li>
-                                                    <li><a href="shop.html">Jeans</a></li>
-                                                    <li><a href="shop.html">Trousers</a></li>
+                                                    <li><a href="{% url 'index' %}">Swimwear</a></li>
+                                                    <li><a href="{% url 'index' %}">Skirts</a></li>
+                                                    <li><a href="{% url 'index' %}">Jeans</a></li>
+                                                    <li><a href="{% url 'index' %}">Trousers</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -150,10 +150,10 @@
                                             <h6 class="title">Clothing</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-                                                    <li><a href="shop.html">Top Wear</a></li>
-                                                    <li><a href="shop.html">Party wear</a></li>
-                                                    <li><a href="shop.html">Bottom Wear</a></li>
-                                                    <li><a href="shop.html">Indian Wear</a></li>
+                                                    <li><a href="{% url 'index' %}">Top Wear</a></li>
+                                                    <li><a href="{% url 'index' %}">Party wear</a></li>
+                                                    <li><a href="{% url 'index' %}">Bottom Wear</a></li>
+                                                    <li><a href="{% url 'index' %}">Indian Wear</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -161,10 +161,10 @@
                                             <h6 class="title">Accessories</h6>
                                             <div class="content">
                                                 <ul class="menu-col">
-                                                    <li><a href="shop.html">Bags</a></li>
-                                                    <li><a href="shop.html">Sunglasses</a></li>
-                                                    <li><a href="shop.html">Fragrances</a></li>
-                                                    <li><a href="shop.html">Wallets</a></li>
+                                                    <li><a href="{% url 'index' %}">Bags</a></li>
+                                                    <li><a href="{% url 'index' %}">Sunglasses</a></li>
+                                                    <li><a href="{% url 'index' %}">Fragrances</a></li>
+                                                    <li><a href="{% url 'index' %}">Wallets</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -174,18 +174,18 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="dropdown active">
+                        <li class="dropdown">
                             <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
                             <ul class="dropdown-menu">
-                                <li><a href="cart.html">Cart</a></li>
-                                <li><a href="checkout.html">Checkout</a></li>
-                                <li><a href="account.html">My Account</a></li>
-                                <li><a href="wishlist.html">Wishlist</a></li>
-                                <li><a href="shopdetail.html">Shop Detail</a></li>
+                                <li><a href="{% url 'cart' %}">Cart</a></li>
+                                <li><a href="{% url 'checkout' %}">Checkout</a></li>
+                                <li><a href="{% url 'account' %}">My Account</a></li>
+                                <li><a href="{% url 'wishlist' %}">Wishlist</a></li>
+                                <li><a href="{% url 'shopdetail' %}">Shop Detail</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="service.html">Our Service</a></li>
-                        <li class="nav-item"><a class="nav-link" href="shop.html">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'service' %}">Our Service</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
